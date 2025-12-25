@@ -9,9 +9,9 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mydatasiswa.modeldata.DataSiswa
-import com.example.mydatasiswa.repositori.RepositoryDataSiswa
-import com.example.mydatasiswa.uicontroller.route.DestinasiDetail
+import com.example.praktikum10.modeldata.DataSiswa
+import com.example.praktikum10.repositori.RepositoryDataSiswa
+import com.example.praktikum10.uicontroller.route.DestinasiDetail
 import kotlinx.coroutines.launch
 import kotlinx.serialization.InternalSerializationApi
 import retrofit2.HttpException

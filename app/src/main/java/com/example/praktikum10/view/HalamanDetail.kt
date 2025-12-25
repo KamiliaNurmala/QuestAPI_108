@@ -34,13 +34,13 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.mydatasiswa.viewmodel.DetailViewModel
+import com.example.mydatasiswa.viewmodel.StatusUIDetail
 import kotlinx.coroutines.launch
 import com.example.praktikum10.R
 import com.example.praktikum10.uicontroller.route.DestinasiDetail
-import com.example.praktikum10.viewmodel.DetailViewModel
 import com.example.praktikum10.viewmodel.provider.PenyediaViewModel
-import com.example.praktikum10.model.Siswa
-import com.example.praktikum10.viewmodel.StatusUIDetail
+import com.example.praktikum10.modeldata.DataSiswa
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,11 +61,18 @@ fun DetailSiswaScreen(
             )
         },
         floatingActionButton = {
+            val uiState = uiState
             FloatingActionButton(
                 onClick = {
-                    val currentState = uiState
-                    if (currentState is StatusUIDetail.Success) {
-                        navigateToEditItem(currentState.statusiswa.id)
+                    // Menggunakan 'when' untuk mengecek status
+                    when (uiState) {
+                        is StatusUIDetail.Success -> {
+                            // Navigasi ke halaman edit dengan ID dari data siswa
+                            navigateToEditItem(uiState.satusiswa.id)
+                        }
+                        else -> {
+                            // Tidak melakukan apa-apa jika sedang Loading atau Error
+                        }
                     }
                 },
                 shape = MaterialTheme.shapes.medium,
@@ -98,7 +105,7 @@ fun DetailSiswaScreen(
 
 @Composable
 fun DetailDataSiswa(
-    siswa: Siswa,
+    siswa: DataSiswa,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -148,7 +155,7 @@ private fun BodyDetailDataSiswa(
         when (statusUIDetail) {
             is StatusUIDetail.Success -> {
                 DetailDataSiswa(
-                    siswa = statusUIDetail.statusiswa,
+                    siswa = statusUIDetail.satusiswa,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
@@ -198,7 +205,7 @@ private fun DeleteConfirmationDialog(
     AlertDialog(
         onDismissRequest = { /* Do nothing */ },
         title = { Text(stringResource(R.string.attention)) },
-        text = { Text(stringResource(R.string.delete_question)) },
+        text = { Text(stringResource(R.string.tanya)) },
         modifier = modifier,
         dismissButton = {
             TextButton(onClick = onDeleteCancel) {

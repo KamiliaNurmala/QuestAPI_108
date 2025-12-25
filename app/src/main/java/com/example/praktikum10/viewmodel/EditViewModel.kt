@@ -6,12 +6,12 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mydatasiswa.modeldata.DetailSiswa
-import com.example.mydatasiswa.modeldata.UIStateSiswa
-import com.example.mydatasiswa.modeldata.toDataSiswa
-import com.example.mydatasiswa.modeldata.toUiStateSiswa
-import com.example.mydatasiswa.repositori.RepositoryDataSiswa
-import com.example.mydatasiswa.uicontroller.route.DestinasiDetail
+import com.example.praktikum10.modeldata.DetailSiswa
+import com.example.praktikum10.modeldata.UIStateSiswa
+import com.example.praktikum10.modeldata.toDataSiswa
+import com.example.praktikum10.modeldata.toUiStateSiswa
+import com.example.praktikum10.repositori.RepositoryDataSiswa
+import com.example.praktikum10.uicontroller.route.DestinasiDetail
 import kotlinx.coroutines.launch
 import retrofit2.Response
 

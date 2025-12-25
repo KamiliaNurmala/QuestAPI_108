@@ -14,12 +14,12 @@ import com.example.praktikum10.uicontroller.route.DestinasiEntry
 import com.example.praktikum10.uicontroller.route.DestinasiHome
 import com.example.praktikum10.view.DetailSiswaScreen
 import com.example.praktikum10.view.EntrySiswaScreen
-import com.example.praktikum10.view.EditSiswaSceen
+import com.example.praktikum10.view.EditSiswaScreen
 import com.example.praktikum10.view.HomeScreen
 
 @Composable
 fun DataSiswaApp(navController: NavHostController = rememberNavController(),
-                 modifier: Modifier = Modifier
+                 modifier: Modifier
 ){
     HostNavigasi(navController = navController)
 }
@@ -54,7 +54,7 @@ fun HostNavigasi(
         composable (DestinasiEdit.routeWithArgs, arguments = listOf(navArgument
             (DestinasiEdit.itemIdArg) {
                 type = NavType.IntType })) {
-            EditSiswaScreen(navigateBAck = { navController.navigate(DestinasiHome.route)},
+            EditSiswaScreen(navigateBack = { navController.navigate(DestinasiHome.route)},
                 onNavigateUp = {navController.navigateUp()})
         }
 
