@@ -15,6 +15,7 @@
 # Tugas Minggu Ini (25 September 2025)
 <br>
 **Sebelum Dihapus**
+<br>
 <img width="348" height="675" alt="Screenshot 2025-12-25 212643" src="https://github.com/user-attachments/assets/55fcb7e8-e728-495a-9fa8-0b04a5eef555" />
 <br>
 <br>
@@ -25,6 +26,7 @@
 <br>
 <br>
 **Setelah Dihapus**
+<br>
 <img width="460" height="683" alt="Screenshot 2025-12-25 214825" src="https://github.com/user-attachments/assets/bbc96c3b-f216-4f04-9ed9-93a84b1ad820" />
 <br>
 <br>
