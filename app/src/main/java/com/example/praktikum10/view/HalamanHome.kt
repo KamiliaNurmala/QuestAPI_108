@@ -135,12 +135,12 @@ fun DaftarSiswa(
     modifier: Modifier = Modifier
 ) {
     LazyColumn(modifier = modifier) {
-        items(items = itemSiswa, key = { it.id }) { siswa ->
+        items(items = itemSiswa, key = { it.id }) { person ->
             ItemSiswa(
-                siswa = siswa,
+                siswa = person,
                 modifier = Modifier
                     .padding(dimensionResource(id = R.dimen.padding_small))
-                    .clickable { onSiswaClick(siswa) }
+                    .clickable { onSiswaClick(person) }
             )
         }
     }
