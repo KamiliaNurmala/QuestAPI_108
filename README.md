@@ -45,3 +45,5 @@
 
 # Setelah diedit
 <img width="490" height="934" alt="Screenshot 2025-12-25 223934" src="https://github.com/user-attachments/assets/85d96443-5bfb-4797-b6a2-85940de2179e" />
+<br>
+<img width="865" height="977" alt="Screenshot 2025-12-25 224641" src="https://github.com/user-attachments/assets/221f593b-d9d4-4785-ad93-2847feb31993" />
